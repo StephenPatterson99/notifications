@@ -1,0 +1,19 @@
+{
+    "name": "spatterson/notify",
+    "description": "A package to use the GOV.UK Notify service",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stephen Patterson",
+            "email": "stephen.patterson99@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "spatterson\\notify\\": "src/"
+        }
+    },
+    "require": {}
+}
