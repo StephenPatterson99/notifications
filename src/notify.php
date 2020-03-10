@@ -12,23 +12,31 @@ class Notify
 
     public function __construct()
     {
-        $this->$notifyClient = new NotifyClient([
-            'apiKey' => env('GOVUK_NOTIFY_APIKEY', 'ABCDE12345'),
+        $this->notifyClient = new NotifyClient([
+            'apiKey' => config('notify.govuk_notify_apikey'),
             'httpClient' => new GuzzleClient
         ]);
     }
 
-    public function greet(String $sName)
+    public function greet(String $name)
     {
-        return 'Hi ' . $sName . '! How are you doing today?';
+        return 'Hi ' . $name . '! How are you doing today?';
     }
 
-    public function email(String $sName)
+    public function sendEmailUsingGovukNotify($emailAddress, $templateId, $params)
     {
-        return 'Emailing ' . $sName . ' using GOV.UK Notify mail';
+        try {
+            $response = $this->notifyClient->sendEmail(
+                $emailAddress,
+                $templateId,
+                $params
+            );
+        } catch (NotifyException $e) {
+            // do something
+        };
     }
 
-    public function sms(String $sName)
+    public function sendSMS(String $sName)
     {
         return 'Sending SMS to ' . $sName . ' using GOV.UK Notify message';
     }

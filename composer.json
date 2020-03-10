@@ -1,6 +1,6 @@
 {
     "name": "stephenpatterson99/notify",
-    "description": "A package to use the GOV.UK Notify service",
+    "description": "A package to use the GOV.UK Notify service under development",
     "type": "project",
     "license": "MIT",
     "authors": [

@@ -7,12 +7,9 @@ Route::get('greet/{name}', function ($name) {
     return $notifier->greet($name);
 });
 
-Route::get('email/{name}', function ($name) {
-    $notifier = new Notify();
-    return $notifier->email($name);
-});
+Route::get('email', 'stephenpatterson99\notify\NotificationController@sendEmail');
 
 Route::get('sms/{name}', function ($name) {
     $notifier = new Notify();
-    return $notifier->sms($name);
+    return $notifier->sendSMS($name);
 });
