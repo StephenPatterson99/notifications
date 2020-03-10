@@ -1,5 +1,5 @@
 {
-    "name": "StephenPatterson99/notify",
+    "name": "stephenpatterson99/notify",
     "description": "A package to use the GOV.UK Notify service",
     "type": "project",
     "license": "MIT",
@@ -12,8 +12,18 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "StephenPatterson99\\notify\\": "src/"
+            "stephenpatterson99\\notify\\": "src/"
         }
     },
-    "require": {}
+    "extra": {
+        "laravel": {
+            "providers": [
+                "stephenpatterson99\\notify\\NotifyServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php-http/guzzle6-adapter": "^2.0@dev",
+        "alphagov/notifications-php-client": "dev-master"
+    }
 }
