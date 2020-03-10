@@ -1,6 +1,6 @@
 <?php
 
-namespace spatterson\notify;
+namespace stephenpatterson99\notif;
 
 class Notify
 {

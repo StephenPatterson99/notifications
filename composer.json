@@ -1,5 +1,5 @@
 {
-    "name": "spatterson/notify",
+    "name": "StephenPatterson99/notify",
     "description": "A package to use the GOV.UK Notify service",
     "type": "project",
     "license": "MIT",
@@ -12,7 +12,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "spatterson\\notify\\": "src/"
+            "StephenPatterson99\\notify\\": "src/"
         }
     },
     "require": {}
